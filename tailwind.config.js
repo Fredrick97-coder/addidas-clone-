@@ -4,6 +4,14 @@ module.exports = {
     extend: {
       fontFamily: {
         addidas: ['AdihausDIN', 'sans-serif'],
+        addidasbold: [
+          'AdihausDIN-CnBoldItalic',
+          'AdihausDIN Cn',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+        ],
+        roboto: ['Roboto', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
