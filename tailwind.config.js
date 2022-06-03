@@ -5,7 +5,7 @@ module.exports = {
       fontFamily: {
         addidas: ['AdihausDIN', 'sans-serif'],
         addidasbold: [
-          'AdihausDIN-CnBoldItalic',
+          'AdihausDIN-CnBold',
           'AdihausDIN Cn',
           'Helvetica',
           'Arial',
