@@ -7,16 +7,19 @@ export const NavLink = [
     link: 'MEN',
     drop: true,
     Dropdown: <DropLink />,
+    bold: true,
   },
   {
     id: 2,
     link: 'WOMEN',
+    bold: true,
   },
   {
     id: 3,
     link: 'KIDS',
     drop: true,
     Dropdown: <DropdownMenu />,
+    bold: true,
   },
   {
     id: 4,
