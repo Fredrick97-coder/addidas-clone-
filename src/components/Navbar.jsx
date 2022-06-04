@@ -5,30 +5,69 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import logo from '../assets/adidas-logo-png-2362.png';
+import { NavLink } from '../model/NavLink';
+// import DropdownMenu from './Dropdown';
 
 function Navbar() {
+  const [track, updateTrack] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClick = (i) => {
+    if (track === i) {
+      updateTrack(null);
+      if (window.innerWidth < 960) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    }
+    updateTrack(i);
+  };
+
+  const onMouseEnter = (i) => {
+    if (track === i) {
+      updateTrack(null);
+      if (window.innerWidth < 960) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    }
+    updateTrack(i);
+  };
+
+  const onMouseLeave = (i) => {
+    if (track === i) {
+      updateTrack(null);
+      if (window.innerWidth < 960) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(false);
+      }
+    }
+    updateTrack(i);
+  };
+
   return (
-    <div className="h-full w-full font-addidas">
-      <nav className="flex flex-row justify-between bg-white px-10 py-6 shadow-sm">
+    <div className="h-full w-full font-addidas ">
+      <nav className="flex flex-row justify-between items-end bg-white px-10 py-6 shadow-sm ">
         <img src={logo} alt="addidas" className="h-[35px]" />
-        <ul className="flex flex-row items-center">
-          <li className="px-2 tracking-widest text-sm font-bold cursor-pointer">
-            MEN
-          </li>
-          <li className="px-2 tracking-widest text-sm font-bold cursor-pointer">
-            WOMEN
-          </li>
-          <li className="px-2 tracking-widest text-sm font-bold cursor-pointer">
-            KIDS
-          </li>
-          <li className="px-2 tracking-widest text-sm font-normal cursor-pointer">
-            SALE
-          </li>
-          <li className="px-2 tracking-widest text-sm font-normal cursor-pointer">
-            3 STRIPE LIFE
-          </li>
-        </ul>
+        <div className="flex flex-row items-center">
+          {NavLink.map(({ id, link, Dropdown, drop }, i) => (
+            <li
+              onClick={() => onClick(i)}
+              onMouseEnter={() => onMouseEnter(i)}
+              onMouseLeave={() => onMouseLeave(i)}
+              className="px-2 tracking-widest text-sm cursor-pointer list-none hover:bg-yellow-500"
+            >
+              {link}
+              {track === i && isOpen ? Dropdown : null}
+            </li>
+          ))}
+        </div>
         <div className="relative flex flex-row items-center">
           <div className="relative px-3">
             <input

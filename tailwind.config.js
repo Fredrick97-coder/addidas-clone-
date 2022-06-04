@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        addidas: ['AdihausDIN', 'sans-serif'],
+        addidas: ['AdihausDIN-Regular'],
         addidasbold: [
           'AdihausDIN-CnBold',
           'AdihausDIN Cn',

@@ -1,5 +1,6 @@
 import Banner from './components/Banner';
 import Collections from './components/Collections';
+import DropdownMenu from './components/Dropdown';
 import Feature from './components/Feature';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
