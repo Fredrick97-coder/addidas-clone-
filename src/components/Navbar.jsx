@@ -4,7 +4,7 @@ import {
   ShoppingCartOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../assets/adidas-logo-png-2362.png';
 import { NavLink } from '../model/NavLink';
 // import DropdownMenu from './Dropdown';
@@ -51,6 +51,14 @@ function Navbar() {
     }
     updateTrack(i);
   };
+
+  useEffect(() => {
+    if (window.innerWidth < 960) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }, [track]);
 
   var prevScrollPos = window.pageYOffset;
 
