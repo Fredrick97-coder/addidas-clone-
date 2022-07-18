@@ -5,6 +5,7 @@ export const Product = [
     title: 'Ultraboost 22 Shoes',
     description: `Men's Runnings`,
     rating: 'best seller',
+    price: 30,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const Product = [
     title: 'Ultraboost 22 Shoes',
     description: `Men's Runnings`,
     rating: 'best seller',
+    price: 40,
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const Product = [
     title: 'Ultraboost 22 Shoes',
     description: `Men's Runnings`,
     rating: 'best seller',
+    price: 10,
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const Product = [
     title: 'Ultraboost 22 Shoes',
     description: `Men's Runnings`,
     rating: 'best seller',
+    price: 50,
   },
   {
     id: 5,
@@ -33,5 +37,30 @@ export const Product = [
     title: 'Ultraboost 22 Shoes',
     description: `Men's Runnings`,
     rating: 'best seller',
+    price: 22,
+  },
+  {
+    id: 6,
+    img: require('../assets/collections/3.webp'),
+    title: 'Ultraboost 22 Shoes',
+    description: `Men's Runnings`,
+    rating: 'best seller',
+    price: 72,
+  },
+  {
+    id: 7,
+    img: require('../assets/collections/3.webp'),
+    title: 'Ultraboost 22 Shoes',
+    description: `Men's Runnings`,
+    rating: 'best seller',
+    price: 52,
+  },
+  {
+    id: 8,
+    img: require('../assets/collections/3.webp'),
+    title: 'Ultraboost 22 Shoes',
+    description: `Men's Runnings`,
+    rating: 'best seller',
+    price: 100,
   },
 ];

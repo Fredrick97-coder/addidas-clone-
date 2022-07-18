@@ -1,27 +1,17 @@
-import Banner from './components/Banner';
-import Collections from './components/Collections';
-import DropdownMenu from './components/Dropdown';
-import Feature from './components/Feature';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import History from './components/History';
-import Navbar from './components/Navbar';
-import Products from './components/Products';
-import Services from './components/Services';
+import HomePage from './pages/Home';
+import Login from './pages/Auth/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Register from './pages/Auth/Register';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Feature />
-      <Collections />
-      <Products />
-      <Services />
-      <History />
-      <Banner />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
   );
 }
 

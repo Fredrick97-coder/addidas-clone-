@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img from '../assets/hero1.jpeg';
 import left from '../assets/left.jpeg';
 
@@ -15,7 +16,7 @@ function Hero() {
             With High Quality Stuff
           </h3>
           <button className="bg-yellow-500 text-white px-5 py-2 mt-5 text-xl font-extrabold shadow-md">
-            Get Started
+            <Link to="/register">Get Started</Link>
           </button>
         </div>
       </div>

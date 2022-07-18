@@ -86,7 +86,7 @@ function Navbar() {
         <nav className="flex flex-row justify-between items-end bg-white px-10 py-6 shadow-sm ">
           <img src={logo} alt="addidas" className="h-[35px]" />
           <div className="flex flex-row items-center">
-            {NavLink.map(({ id, link, Dropdown, drop, bold }, i) => (
+            {NavLink?.map(({ id, link, Dropdown, drop, bold }, i) => (
               <li
                 onClick={() => onClick(i)}
                 onMouseEnter={() => onMouseEnter(i)}
